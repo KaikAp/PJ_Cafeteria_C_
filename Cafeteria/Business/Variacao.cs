@@ -9,7 +9,7 @@ namespace Business
     public class Variacao
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Nome { get; set; }
         public string Imagem { get; set; }
         public Alimento Alimento { get; set; }
     }

@@ -41,24 +41,52 @@ namespace Repository
                     t.Property(t => t.Descricao).HasColumnType("varchar(200)").IsRequired();
                     t.Property(t => t.Nome).HasColumnType("varchar(50)").IsRequired();
                     t.Property(t => t.Valor).HasColumnType("double").IsRequired();
-                    t.HasOne(t => t.Categoria).WithMany(t => t.alimentos).OnDelete(DeleteBehavior.NoAction).IsRequired();
                 }
-
-
                 );
-
-
-
             modelBuilder.Entity<Contato>(
                 t =>
                 {
                     t.ToTable("Contatos");
-                    t.HasKey(t=> t.Id);
+                    t.HasKey(t => t.Id);
                     t.Property(t => t.Id).HasColumnType("int").IsRequired().ValueGeneratedOnAdd();
                     t.Property(t => t.Email).HasColumnType("varchar(100)").IsRequired();
                     t.Property(t => t.Celular).HasColumnType("varchar(20)").IsRequired();
                 }
              );
+
+            modelBuilder.Entity<Estrutura>(
+                t =>
+                {
+                    t.ToTable("Estruturas");
+                    t.HasKey(t => t.Id);
+                    t.Property(t => t.Id).HasColumnType("int").IsRequired().ValueGeneratedOnAdd();
+                    t.Property(t => t.Nome).HasColumnType("varchar(100)").IsRequired();
+                    t.Property(t => t.Descricao).HasColumnType("varchar(200)").IsRequired();
+                }
+                );
+            modelBuilder.Entity<Usuario>(
+                t =>
+                {
+                    t.ToTable("Usuarios");
+                    t.HasKey(t => t.Id);
+                    t.Property(t => t.Id).HasColumnType("int").IsRequired().ValueGeneratedOnAdd();
+                    t.Property(t => t.Nome).HasColumnType("varchar(100)").IsRequired();
+                    t.Property(t => t.Login).HasColumnType("varchar(20)").IsRequired();
+                    t.Property(t => t.Senha).HasColumnType("varchar(10)").IsRequired();
+                }
+                );
+
+            modelBuilder.Entity<Variacao>(
+                t =>
+                {
+                    t.ToTable("Variacoes");
+                    t.HasKey(t => t.Id);
+                    t.Property(t => t.Id).HasColumnType("int").IsRequired().ValueGeneratedOnAdd();
+                    t.Property(t => t.Nome).HasColumnType("varchar(100)").IsRequired();
+                }
+                
+                
+                );
 
         }
     }
