@@ -11,6 +11,6 @@ namespace Business
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Imagem { get; set; }
-        public Alimento Alimento { get; set; }
+        public virtual Alimento Alimento { get; set; }
     }
 }

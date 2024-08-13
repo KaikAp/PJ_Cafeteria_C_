@@ -13,8 +13,8 @@ namespace Business
         public string Descricao { get; set; }
         public string Imagem { get; set; }
         public float Valor { get; set; }
-        public Categoria Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
 
-        public List<Variacao> Variacaos { get; set; }
+        public virtual List<Variacao> Variacaos { get; set; }
     }
 }
