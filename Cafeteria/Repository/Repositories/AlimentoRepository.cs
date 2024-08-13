@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class CategoriaRepository : GenericRepository<Categoria>
+    public class AlimentoRepository : GenericRepository<Alimento>
     {
-        public CategoriaRepository(Context context) : base(context) { 
-        
+        public AlimentoRepository(Context context): base(context) {
         
         }
     }

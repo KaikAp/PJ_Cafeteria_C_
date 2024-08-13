@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class CategoriaRepository : GenericRepository<Categoria>
+    public class ContatoRepository : GenericRepository<Contato>
     {
-        public CategoriaRepository(Context context) : base(context) { 
+        public ContatoRepository(Context context): base(context) { 
         
-        
-        }
+        }    
     }
 }
