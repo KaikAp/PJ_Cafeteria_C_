@@ -1,5 +1,6 @@
 ﻿using Business;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Repository.Entity_framework;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,10 @@ namespace Repository.Repositories
 
 
 
+        public virtual void Insert(TEntity entity)
+        {
+            dbSet.Add(entity);
+        }
         public virtual List<TEntity> GetAll()
         {
             return dbSet.ToList();
@@ -48,5 +53,9 @@ namespace Repository.Repositories
             dbSet.Entry(entity);
         }
 
+        public virtual void Persist()
+        {
+            _context.SaveChanges();
+        }
     }
 }

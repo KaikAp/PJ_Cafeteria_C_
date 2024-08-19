@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    internal class UsuarioRepository : GenericRepository<Usuario>
+    public class UsuarioRepository : GenericRepository<Usuario>
     {
         public UsuarioRepository(Context context) : base(context) { 
         

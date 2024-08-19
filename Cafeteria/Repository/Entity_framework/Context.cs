@@ -7,17 +7,17 @@ namespace Repository.Entity_framework
     {
         public Context(DbContextOptions<Context> options) : base(options) { }
 
-        public DbSet<Contato> Contatos { get; set; }
+        public DbSet<Contato>Contatos{ get; set; }
 
-        public DbSet<Estrutura> Estruturas { get; set; }
+        public DbSet<Estrutura>Estruturas{ get; set; }
 
-        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Categoria>Categorias{ get; set; }
 
-        public DbSet<Alimento> Alimentos { get; set; }
+        public DbSet<Alimento>Alimentos{ get; set; }
 
-        public DbSet<Variacao> Variacaos { get; set; }
+        public DbSet<Variacao>Variacaos{ get; set; }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario>Usuarios{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,9 +26,10 @@ namespace Repository.Entity_framework
                 t =>
                 {
                     t.ToTable("Categorias");
+                    t.HasKey(t => t.Id);
                     t.Property(t => t.Id).HasColumnType("int").IsRequired().ValueGeneratedOnAdd();
                     t.Property(t => t.Nome).HasColumnType("varchar(50)").IsRequired();
-                    t.HasKey(t => t.Id);
+                    t.Property(t => t.Imagem).HasColumnType("varchar(100)").IsRequired();
                 }
                 );
 
