@@ -137,7 +137,44 @@ public class Program
             }
             else if (opc.ToString().Equals("5"))
             {
+                Console.WriteLine("informe o id que deseja alterar");
+                var id = Console.ReadLine();
+                int? idConvertido = null;
+                try
+                {
+                    idConvertido = Convert.ToInt32(id);
+                    Console.ReadLine();
+                }
+                catch
+                {
+                    Console.WriteLine("valor de id invalido");
+                    Console.ReadLine();
+                }
 
+                if (idConvertido != null)
+                {
+                    Categoria categoria = repository.GetById(idConvertido.Value);
+                    if (categoria != null)
+                    {
+                        Console.WriteLine("informe um nome");
+                        var nome = Console.ReadLine();
+                        Console.WriteLine("informe uma imagem");
+                        var imagem = Console.ReadLine();
+
+                        categoria.Nome = nome;
+                        categoria.Imagem = imagem;
+                        repository.Update(categoria);
+                        repository.Persist();
+
+                        Console.WriteLine("Categoria atualizada com sucesso");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("categoria não existente");
+                        Console.ReadLine();
+                    }
+                }
             }
             else if (opc.ToString().Equals("6"))
             {
