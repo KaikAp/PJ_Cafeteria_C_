@@ -1,36 +1,49 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/js/bootstrap.min.js">
-    <link rel="stylesheet" href="css/main.css">
+<html>
 
-    <title>Cafeteria</title>
-  </head>
+<head>
+  <title>
+    Product Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css">
 
-  <body>
-    <div class="Container">
-      <div class="navbar">
-        <ul class="navbar ul">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Local</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </div>
-      <img src="img/xicara-de-cafe-quente.png" alt="logo" class="logo-alt">
-      <h2 class="logo-Escrita">coffe <span class="">Express</span></h2>
+</head>
+
+<body>
+  <div class="header">
+    <img alt="Logo" height="50" src="img/xicara-de-cafe-quente.png" width="50" />
+    <nav>
+      <a href="index.html">Produtos</a>
+      <a href="#">Estrutura</a>
+      <a href="#">Novidade</a>
+    </nav>
+    <form>
+    <div class="search-bar">
+      <input placeholder="Busque por um produto" type="text" class=".header .search-bar .text-input"/>
+      <button type="submit">Buscar</button>
     </div>
+  </form>
+    <div class="cart">
+      R$ 0,00
     </div>
-
-
+  </div>
+  <div class="content">
+    <div class="category">
+      <h3>Cafés</h3>
+      <a href="#"><img alt="Café" height="200" src="img/café_img.jpg" width="200" /></a>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
-  </body>
+    <div class="category">
+      <h3>Bebidas</h3>
+      <a href="#"><img alt="Bebidas" height="200" src="img/bebidas.jpg" width="200" /></a>
+    </div>
+    <div class="category">
+      <h3>Lanches</h3>
+    <a href="#"><img alt="sanduiche" height="200" src="img/sanduiche.jfif" width="200" /></a>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Avenida Romeu Tuma 350, Vila Santa Rosa<br/>São Paulo<br/>Telefone 17 0000 - 0000</p>
+  </div>
+</body>
+
 </html>
