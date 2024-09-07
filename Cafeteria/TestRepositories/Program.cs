@@ -59,7 +59,7 @@ public class Program
     static void menuCategoria()
     {
         DbContextOptionsBuilder<Context> optionsBuilder = new DbContextOptionsBuilder<Context>();
-        optionsBuilder.UseSqlServer("server=DESKTOP-O1S388N\\SQLEXPRESS;database=Cafeteria;trusted_Connection=true;encrypt=false");
+        optionsBuilder.UseSqlServer("server=;database=Cafeteria;trusted_Connection=true;encrypt=false");
         Context context = new Context(optionsBuilder.Options);
         CategoriaRepository repository = new CategoriaRepository(context);
         bool continua = true;
